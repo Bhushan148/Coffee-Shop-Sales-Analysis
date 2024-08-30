@@ -147,6 +147,21 @@ modify column product_detail text not null;
 
 describe coffee_shop_sale;
 ```
+#### 📝 **Output:**
+| **Field**            | **Datatype**       | **Null** | **Key** | **Default** |
+|----------------------|---------------------|----------|---------|-------------|
+| `transaction_id`     | `int`               | NO       |  `Primary Key`       |             |
+| `transaction_date`   | `date`              | NO       |         |             |
+| `transaction_time`   | `time`              | NO       |         |             |
+| `transaction_qty`    | `int`               | NO       |         |             |
+| `store_id`           | `int`               | NO       |         |             |
+| `store_location`     | `varchar(100)`      | NO       |         |             |
+| `product_id`         | `int`               | NO       |         |             |
+| `unit_price`         | `decimal(10,2)`     | NO       |         |             |
+| `product_category`   | `varchar(50)`       | NO       |         |             |
+| `product_type`       | `varchar(50)`       | NO       |         |             |
+| `product_detail`     | `text`              | NO       |         |             |
+
 - **Query 2:** 📊 **MoM Growth and Difference for Sales**
 ```SQL
 SELECT 
@@ -184,6 +199,16 @@ FROM (
         Sale_Month
 ) AS Monthly_Sales;
 ```
+#### 📝 **Output:**
+| **Sale_Month** | **Total_Sales** | **Previous_Month_Sales** | **MoM_Difference** | **MoM_Growth_Percentage** | **MoM_Formatted**                  |
+|----------------|-----------------|--------------------------|--------------------|---------------------------|-----------------------------------|
+| 1              | 81,677.74       | null                     | null               | null                      | null                              |
+| 2              | 76,145.19       | 81,677.74                | -5,532.55          | -6.77%                    | - 6.77% | 5.53K Vs LM              |
+| 3              | 98,834.68       | 76,145.19                | 22,689.49          | 29.80%                    | + 29.80% | 22.69K Vs LM             |
+| 4              | 118,941.08      | 98,834.68                | 20,106.40          | 20.34%                    | + 20.34% | 20.11K Vs LM             |
+| 5              | 156,727.76      | 118,941.08               | 37,786.68          | 31.77%                    | + 31.77% | 37.79K Vs LM             |
+| 6              | 166,485.88      | 156,727.76               | 9,758.12           | 6.23%                     | + 6.23% | 9.76K Vs LM              |
+
 - **Query 3:** 📅 **Total Sales Monthly**
 ```SQL
 select month(transaction_date) AS Monthly_sale,
@@ -191,6 +216,16 @@ select month(transaction_date) AS Monthly_sale,
 from coffee_shop_sale
 group by Monthly_sale;
 ```
+#### 📝 **Output:**
+| **Monthly_Sale** | **Total_Sales** |
+|------------------|-----------------|
+| 1                | $ 81,678        |
+| 2                | $ 76,145        |
+| 3                | $ 98,835        |
+| 4                | $ 118,941       |
+| 5                | $ 156,728       |
+| 6                | $ 166,486       |
+
 - **Query 4:** 🛒 **Total Orders Monthly**
 ```SQL
 select month(transaction_date) AS Monthly_sale,
@@ -198,6 +233,16 @@ select month(transaction_date) AS Monthly_sale,
 from coffee_shop_sale
 group by Monthly_sale;
 ```
+#### 📝 **Output:**
+| **Monthly_Sale** | **Total_Orders** |
+|------------------|------------------|
+| 1                | 17,314           |
+| 2                | 16,359           |
+| 3                | 21,229           |
+| 4                | 25,335           |
+| 5                | 33,527           |
+| 6                | 35,352           |
+
 - **Query 5:** 📦 **Total Quantity Monthly**
 ```SQL
 select month(transaction_date) AS Monthly_Qty,
@@ -205,6 +250,16 @@ select month(transaction_date) AS Monthly_Qty,
 from coffee_shop_sale
 group by Monthly_Qty;
 ```
+#### 📝 **Output:**
+| **Monthly_Qty** | **Total_Qty** |
+|-----------------|---------------|
+| 1               | 24.87K Qty    |
+| 2               | 23.55K Qty    |
+| 3               | 30.41K Qty    |
+| 4               | 36.47K Qty    |
+| 5               | 48.23K Qty    |
+| 6               | 50.94K Qty    |
+
 - **Query 6:** 📈 **MoM Growth and Difference for Orders**
 ```SQL
 SELECT 
@@ -242,6 +297,16 @@ FROM (
         Monthly_sale
 ) AS Monthly_Orders;
 ```
+#### 📝 **Output:**
+| **Monthly_Sale** | **Total_Orders** | **Previous_Month_Orders** | **MoM_Difference** | **MoM_Growth_Percentage_Orders** | **MoM_Comparison**         |
+|------------------|------------------|---------------------------|--------------------|---------------------------------|-----------------------------|
+| 1                | 17,314           | N/A                       | N/A                | N/A                             | N/A | N/A Orders Vs LM        |
+| 2                | 16,359           | 17,314                    | -955               | -5.52%                          | - 5.52% | - 955 Orders Vs LM      |
+| 3                | 21,229           | 16,359                    | 4,870              | 29.77%                          | + 29.77% | + 4870 Orders Vs LM     |
+| 4                | 25,335           | 21,229                    | 4,106              | 19.34%                          | + 19.34% | + 4106 Orders Vs LM     |
+| 5                | 33,527           | 25,335                    | 8,192              | 32.33%                          | + 32.33% | + 8192 Orders Vs LM     |
+| 6                | 35,352           | 33,527                    | 1,825              | 5.44%                           | + 5.44% | + 1825 Orders Vs LM      |
+
 - **Query 7:** 🔄 **MoM Growth and Difference for Quantity Sold**
 ``` SQL
 SELECT 
@@ -277,6 +342,16 @@ GROUP BY
 ORDER BY 
     MONTH(transaction_date);
 ```
+#### 📝 **Output:**
+| **Monthly_Qty** | **Total_Qty** | **Previous_Month_Qty** | **MoM_Difference** | **MoM_Growth_Percentage** | **MoM_Formatted**         |
+|-----------------|---------------|------------------------|--------------------|---------------------------|---------------------------|
+| 1               | 24.87K Qty     | N/A                    | N/A                | N/A                       | N/A | N/A K Qty Vs LM    |
+| 2               | 23.55K Qty     | 24.87K Qty             | -1,320             | -5.31%                    | - 5.31% | - 1.32K Qty Vs LM |
+| 3               | 30.41K Qty     | 23.55K Qty             | 6,856              | 29.11%                    | + 29.11% | + 6.86K Qty Vs LM |
+| 4               | 36.47K Qty     | 30.41K Qty             | 6,063              | 19.94%                    | + 19.94% | + 6.06K Qty Vs LM |
+| 5               | 48.23K Qty     | 36.47K Qty             | 11,764             | 32.26%                    | + 32.26% | + 11.76K Qty Vs LM |
+| 6               | 50.94K Qty     | 48.23K Qty             | 2,709              | 5.62%                     | + 5.62% | + 2.71K Qty Vs LM  |
+
 - **Query 8:** 🏢 **Sales by Store Location for March**
 ```SQL
 select store_location, sum(transaction_qty*unit_price) as Total_Sale
@@ -284,6 +359,13 @@ from coffee_shop_sale
 where month(transaction_date) = 3
 group by store_location;
 ```
+#### 📝 **Output:**
+| **Store Location**  | **Total_Sale** |
+|---------------------|----------------|
+| Lower Manhattan     | $32,888.68     |
+| Hell's Kitchen       | $33,110.57     |
+| Astoria              | $32,835.43     |
+
 - **Query 9:** 📅 **Calculate Daily Sales Matrix and Include Average Daily Sale**
 ```SQL
 WITH DailySales AS (
@@ -316,6 +398,18 @@ SELECT
 FROM DailySales
 ORDER BY Day;
 ```
+#### 📝 **Output:**
+| **Day** | **Total_Sale_Per_Day** | **Total_Qty** | **Total_Orders** | **Avg_Sale_Per_Day** | **Sales_Comparison** |
+|---------|-------------------------|---------------|------------------|----------------------|-----------------------|
+| 1       | $3,040.25               | 968           | 661              | $3,188.22            | Below Average         |
+| 2       | $2,996.05               | 963           | 673              | $3,188.22            | Below Average         |
+| 3       | $3,155.15               | 1010          | 710              | $3,188.22            | Below Average         |
+| 4       | $2,781.90               | 897           | 624              | $3,188.22            | Below Average         |
+| 5       | $2,945.30               | 952           | 675              | $3,188.22            | Below Average         |
+| ...     | ...                     | ...           | ...              | ...           | ...                   |
+| 30      | $2,932.82               | 917           | 639              | $3,188.22            | Below Average         |
+| 31      | $2,888.08               | 886           | 615              | $3,188.22            | Below Average         |
+
 - **Query 10:** 📆 **Weekend and Weekday Sales**
 ```SQL
 WITH cte AS (
@@ -369,6 +463,16 @@ ORDER BY
     STR_TO_DATE(CONCAT('01 ', ps.Month_Name), '%d %M')  -- Ordering by the chronological month
 ;
 ```
+#### 📝 **Output:**
+| **Month** | **Weekday_Sale** | **Weekend_Sale** | **Total_Sale** |
+|-----------|------------------|------------------|----------------|
+| **January**   | $58,513.11       | $23,164.63       | $81,677.74     |
+| **February**  | $54,002.67       | $22,142.52       | $76,145.19     |
+| **March**     | $73,367.33       | $25,467.35       | $98,834.68     |
+| **April**     | $79,592.51       | $39,348.57       | $118,941.08    |
+| **May**       | $116,627.84      | $40,099.92       | $156,727.76    |
+| **June**      | $121,484.08      | $45,001.80       | $166,485.88    |
+
 - **Query 11:** 🛍️ **Sales by Product Category**
 ```SQL
 select product_category, Sum(transaction_qty*unit_price) as Total_Sale
@@ -378,6 +482,15 @@ group by product_category
 order by Total_Sale desc
 limit 5;
 ```
+#### 📝 **Output:**
+| **Product Category**    | **Total_Sale** |
+|-------------------------|----------------|
+| **Coffee**              | $38,303.60     |
+| **Tea**                 | $27,910.65     |
+| **Bakery**              | $11,902.58     |
+| **Drinking Chocolate**  | $10,253.50     |
+| **Coffee beans**        | $5,256.20      |
+
 - **Query 12:** 📦 **Sales by Product Type**
 ```SQL
 select product_type, Sum(transaction_qty*unit_price) as Total_Sale
@@ -387,6 +500,14 @@ group by product_type
 order by Total_Sale desc
 limit 5;
 ```
+#### 📝 **Output:**
+| **Product Type**          | **Total_Sale** |
+|---------------------------|----------------|
+| **Barista Espresso**      | $13,078.20     |
+| **Brewed Chai tea**       | $11,029.65     |
+| **Hot chocolate**         | $10,253.50     |
+| **Gourmet brewed coffee** | $9,789.10      |
+| **Brewed Black tea**      | $6,875.00      |
 
 ## 🔚 **Conclusion**
 This project demonstrates a **comprehensive approach** to analyzing coffee shop sales data using **SQL** and **Power BI**. From **data preparation** and **cleaning** to **advanced visualization**, each step contributes to a thorough understanding of **sales trends**, **order patterns**, and **product performance**. The final deliverable is a set of **dynamic and interactive dashboards** that provide actionable insights for **business decision-making**.
