@@ -147,3 +147,11 @@ This project demonstrates a **comprehensive approach** to analyzing coffee shop 
 ![Calendar Heat Map](https://github.com/Bhushan148/your-repo-path/images/calendar_heat_map.png)
 ![Sales by Store Location](https://github.com/Bhushan148/your-repo-path/images/sales_by_store_location.png)
 
+## 🌐 **Connect with Me**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-profile) 
+[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://yourportfolio.com) 
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/your-profile)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/your-number)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/your-profile) 
+
