@@ -144,10 +144,11 @@ This project demonstrates a **comprehensive approach** to analyzing coffee shop 
 
 ## 📁 **Project Materials**
 
-- **📄 [Dataset (CSV)](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/Dataset/coffee_shop_sales.csv)**
-- **📊 [PPT About Project](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/Other%20Project%20Material/Presentation.pptx)**
-- **📝 [SQL Query Document](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/SQL%20Queries/SQL_Query_Document.sql)**
-- **🌐 [See Live Dashboard Here](https://app.powerbi.com/groups/me/reports/your-report-id)**
+- **📄 [Dataset (CSV)](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/Coffee%20Shop%20Dataset.csv)**
+- **📊 [PPT About Project](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/Coffee%20Shop%20Sales.pptx
+)**
+- **📝 [SQL Query Document](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/Coffee%20Shop%20Sales%20SQL%20Query%20Document.pdf)**
+- **🌐 [See Live Dashboard Here]([https://app.powerbi.com/groups/me/reports/your-report-id](https://app.powerbi.com/reportEmbed?reportId=1269a965-11e3-412d-bcec-d4ba9179c81e&autoAuth=true&ctid=b5e77a2d-6845-4cd5-8cc6-828b3b988bb5))**
 
 
 ## 🖼️ **Project Images**
