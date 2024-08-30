@@ -143,9 +143,12 @@ This project demonstrates a **comprehensive approach** to analyzing coffee shop 
 - **Documentation and presentation** of project findings.
 
 ## 🖼️ **Project Images**
-![Dashboard Overview](https://github.com/Bhushan148/your-repo-path/images/dashboard_overview.png)
-![Calendar Heat Map](https://github.com/Bhushan148/your-repo-path/images/calendar_heat_map.png)
-![Sales by Store Location](https://github.com/Bhushan148/your-repo-path/images/sales_by_store_location.png)
+
+![Page 1](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/Other%20Project%20Material/Page%201.png)
+![Page 2](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/Other%20Project%20Material/Page%202.png)
+![Page 3](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/Other%20Project%20Material/Page%203.png)
+![Page 4](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/Other%20Project%20Material/Page%204.png)
+
 
 ## 🌐 **Connect with Me**
 
