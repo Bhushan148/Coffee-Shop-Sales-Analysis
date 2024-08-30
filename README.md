@@ -142,6 +142,14 @@ This project demonstrates a **comprehensive approach** to analyzing coffee shop 
 - **Interactive dashboard creation** in Power BI.
 - **Documentation and presentation** of project findings.
 
+## 📁 **Project Materials**
+
+- **📄 [Dataset (CSV)](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/Dataset/coffee_shop_sales.csv)**
+- **📊 [PPT About Project](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/Other%20Project%20Material/Presentation.pptx)**
+- **📝 [SQL Query Document](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/SQL%20Queries/SQL_Query_Document.sql)**
+- **🌐 [See Live Dashboard Here](https://app.powerbi.com/groups/me/reports/your-report-id)**
+
+
 ## 🖼️ **Project Images**
 
 ![Page 1](https://github.com/Bhushan148/Coffee-Shop-Sales-Analysis/blob/main/Other%20Project%20Material/Page%201.png)
